@@ -1,0 +1,37 @@
+#include <stdio.h>
+  int main(){
+  int conj[100],n_informado, i, a, b, rest, pares=0, impares=0;
+  float med=0, imp2=0;
+  printf("quantos numeros deseja armazenar:\n");
+  scanf("%d",&n_informado);
+  printf("informe os numeros:\n");
+  for (i=0;i<n_informado;i++){
+	  scanf("%d",&conj[i]);
+	  if (conj[i]%2==0){
+		  pares++;
+		}else {
+      impares++;
+      if(conj[i]>50){
+        imp2++;
+      }
+		}
+	  if (conj[i]>50){
+	  	med+=conj[i];
+    }
+  }
+	for (i=0;i<n_informado;i++){
+		for (a=i+1;a<n_informado;a++){
+			if (conj[i] > conj[a]){
+				b=conj[i];
+				conj[i]=conj[a];
+				conj[a]=b;	
+			}
+	  }
+  }
+  printf("Ordem crescente:\n");
+  for (i=0;i<n_informado;i++)
+  printf("Conj[%d]:%d \n",i, conj[i]);
+  printf("Números ímpares: %d\nNúmeros pares: %d\n",impares, pares);
+  med=med/imp2;
+  printf("Média dos impares acima de 50: %.2f\n",med);
+}
