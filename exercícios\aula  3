@@ -1,0 +1,43 @@
+//exercicios aula 3.
+//1)
+#include <stdio.h>
+
+int main(void) {
+  int a=1;b=2;c=3;
+  printf("os numeros são: %d %d e %d\n,a,b,c,d);
+  return 0;
+}
+
+//vesão corrigida.
+
+#include <stdio.h>
+
+int main(void) {
+  int a=1,b=2,c=3;
+  printf("os numeros são: %d %d e %d\n",a,b,c);
+  return 0;
+}
+//----------------------------------
+//2)
+#include <stdio.h>
+int main (void){
+  printf("%s\n%s\n%s","um","dois","tres");
+}
+//-----------------------
+ A saida sera:
+um
+dois
+tres
+-------------------------
+//3)
+//tabela da feira.
+#include<stdio.h>
+int main(void){
+  printf("produto |preço unitario |quantidade |preço total\n ");
+  printf("banana  |R$%10.2f\t|%10d |R$%10.2f     \n",2.50,2,5.00);
+  printf("uva     |R$%10.2f\t|%10d |R$%10.2f     \n",6.50,6,39.00);
+  printf("pessego |R$%10.2f\t|%10d |R$%10.2f     \n",10.22,10,102.20);
+  printf("\t|\t\t |subtotal  |R$%10.2f    \n ",146.20);
+  printf("\t|imposto\t\t     |R$%10.2f    \n ",7.31);
+  printf("\t|\t\t |total     |R$%10.2f  \n ",153.51);
+}
